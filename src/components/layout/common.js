@@ -4,6 +4,7 @@ require('../tongdun');
 require('../intercetp');
 require('../api.back');
 require('../baidu.tongji');
+require('../qq.tongji');
 require('../buoy');
 /**
  * webp处理
