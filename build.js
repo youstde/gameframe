@@ -2,6 +2,12 @@ var spawn = require('child_process').spawn;
 var fs = require('fs');
 module.exports = {
     build:function(){
+        this._init();
+        this.mkdir();
+        this.copy();
+    },
+
+    _init:function(){
         var cwd = process.cwd();
         this.config = {
             cwd:cwd,
@@ -21,8 +27,6 @@ module.exports = {
                 ['./src/page/index/*.less',cwd+'/src/page/index']
             ]
         };
-        this.mkdir();
-        this.focusCopy();
     },
 
     mkdir:function(){
@@ -34,7 +38,7 @@ module.exports = {
         });
     },
 
-    focusCopy:function(){
+    copy:function(){
         var files = this.config.files;
         files.forEach(function(file){
             spawn('cp',file);
