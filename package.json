@@ -8,7 +8,7 @@
     "pre": "gulp pre;",
     "prod": "gulp prod;",
     "mock": "gulp mock;",
-    "update":"node node_modules/gameframe/build.js create"
+    "update":"node node_modules/gameframe/build.js update"
   },
   "dependencies": {
     "css-loader": "0.28.7",
