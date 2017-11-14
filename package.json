@@ -1,6 +1,6 @@
 {
   "name": "gameframe",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "gameframe",
   "main":"./build.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "pre": "gulp pre;",
     "prod": "gulp prod;",
     "mock": "gulp mock;",
-    "update":"cnpm install;node node_modules/gameframe/build.js update"
+    "update":"cnpm install git+ssh://git@code.aliyun.com:baitai-components/gameframe.git;node node_modules/gameframe/build.js update"
   },
   "dependencies": {
     "css-loader": "0.28.7",
@@ -27,6 +27,5 @@
     "vkitty": "0.2.3",
     "webpack": "3.8.1",
     "webpack-dev-server": "2.9.4",
-    "gameframe":"git+ssh://git@code.aliyun.com:baitai-components/gameframe.git"
   }
 }
