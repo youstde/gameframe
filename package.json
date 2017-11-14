@@ -1,6 +1,6 @@
 {
   "name": "gameframe",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "gameframe",
   "main":"./build.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "pre": "gulp pre;",
     "prod": "gulp prod;",
     "mock": "gulp mock;",
-    "update":"node node_modules/gameframe/build.js update"
+    "update":"cnpm install;node node_modules/gameframe/build.js update"
   },
   "dependencies": {
     "css-loader": "0.28.7",
