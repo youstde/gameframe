@@ -1,6 +1,6 @@
 {
-  "name": "logicworks",
-  "version": "0.0.1",
+  "name": "gameframe",
+  "version": "0.0.2",
   "author": "gameframe",
   "main":"./build.js",
   "scripts": {
