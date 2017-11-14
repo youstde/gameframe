@@ -20,22 +20,23 @@ var Build = {
             files:[
                 ['-f',__dirname+'/gulpfile.js',cwd],
                 ['-f',__dirname+'/webpack.config.js',cwd],
-                [__dirname+'/package.json',cwd],
-                [__dirname+'/webpack.config.js',cwd],
+                ['-f',__dirname+'/package.json',cwd],
                 [__dirname+'/README.md',cwd],
                 [__dirname+'/.gitignore',cwd],
                 ['-rf',__dirname+'/mock',cwd],
                 ['-rf',__dirname+'/src/components',cwd+'/src'],
                 ['-rf',__dirname+'/src/modules',cwd+'/src'],
-                [__dirname+'/src/page/index/*.js',cwd+'/src/page/index'],
-                [__dirname+'/src/page/index/*.ejs',cwd+'/src/page/index'],
-                [__dirname+'/src/page/index/*.less',cwd+'/src/page/index']
+                [__dirname+'/src/page/index/index.js',cwd+'/src/page/index'],
+                [__dirname+'/src/page/index/html.js',cwd+'/src/page/index'],
+                [__dirname+'/src/page/index/gamejson.js',cwd+'/src/page/index'],
+                [__dirname+'/src/page/index/content.ejs',cwd+'/src/page/index'],
+                [__dirname+'/src/page/index/index.less',cwd+'/src/page/index']
             ]
         };
     },
 
     mkdir:function(){
-        var dirs = ['/src','/src/page'];
+        var dirs = ['/src','/src/page','/src/page/index'];
         var cwd = this.config.cwd;
         dirs.forEach(function(dir){
             dir = cwd+dir;
