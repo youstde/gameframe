@@ -5,7 +5,8 @@ var apiName = process.argv[2];
 var Build = {
     create: function () {
         this._init();
-        this.config.files.concat(
+        var cwd = this.config.cwd;
+        this.config.files = this.config.files.concat([
             ['-rf',__dirname + '/mock', cwd],
             [__dirname + '/src/page/index/index.js', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/html.js', cwd + '/src/page/index'],
@@ -14,7 +15,7 @@ var Build = {
             [__dirname + '/src/page/index/index.less', cwd + '/src/page/index'],
             [__dirname + '/README.md', cwd],
             [__dirname + '/.gitignore', cwd]
-        );
+        ]);
         this.mkdir();
         this.copy();
     },
