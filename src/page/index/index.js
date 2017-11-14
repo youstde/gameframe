@@ -5,6 +5,8 @@ if (window.gameJson) {
 }
 require('./index.less');
 require('../../components/layout/common');
+
+//业务js开始
 document.title = gamejson.lottery.title || '摇骰赚流量';
 
 var gameRule = new Baitai.ruleModule({
@@ -15,14 +17,6 @@ gameRule.sendMessage(window.gamejson);
 window.onMessage('changeRemain', function (data) {
     document.querySelector('#remainCount').innerText = data;
 });
-
-var Mock = require('mockjs');
-Mock.mock(/.+getLottery.+/, {
-    'list': [{
-        'id': 3,
-        'email': 'sdfsdf'
-    }]
-})
 
 
 var Data = require('../../components/data.js');
