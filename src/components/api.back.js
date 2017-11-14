@@ -42,6 +42,7 @@
     if(window.location.href.indexOf('/pre/')>-1){
         url ='//'+window.location.host.replace('activity','gamepre')+'/api/back.jpg?back='+back+'&token='+getMd5Str();
     }
+    el.style.display='none';
     el.setAttribute('src',url);
     document.body.appendChild(el);
 }());

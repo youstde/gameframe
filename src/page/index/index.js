@@ -9,6 +9,10 @@ require('../../components/layout/common');
 //业务js开始
 document.title = gamejson.lottery.title || '摇骰赚流量';
 
+if(/android/i.test(window.navigator.userAgent)){
+    document.querySelector('.statement').innerText='本活动由：来推互动adbaitai.com提供';
+}
+
 var gameRule = new Baitai.ruleModule({
     body: ".game-rule"
 });

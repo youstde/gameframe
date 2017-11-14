@@ -80,14 +80,24 @@ gulp.task('dev',function(){
     })
 });
 
+/**
+ * gulp pre
+ */
+gulp.task('pre',function(){
+    delDist();
+    getEntry(function(entry){
+        webpackConfig.output.publicPath="//oss.ltcdn.cc/pre/baitai-game/flop/";
+        var compiler = compile(entry);
+    })
+});
 
 /**
- * gulp dev
+ * gulp prod
  */
 gulp.task('prod',function(){
     delDist();
     getEntry(function(entry){
-        webpackConfig.output.publicPath="//activity.ltyun.cc/pre/baitai-game/flop/";
+        webpackConfig.output.publicPath="//oss.ltcdn.cc/prod/baitai-game/flop/";
         var compiler = compile(entry);
     })
 });

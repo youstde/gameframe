@@ -9,7 +9,7 @@ plugins.push(new webpack.optimize.CommonsChunkPlugin({
 plugins.push(new UglifyJSPlugin());
 var webpackConfig = {
     output: {
-        path: __dirname+'/dist',
+        path: __dirname+'/dist/static',
         filename: '[name].[chunkhash].js'
     },
     module: {
