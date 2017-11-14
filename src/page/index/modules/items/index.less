@@ -1,0 +1,47 @@
+@rem:100rem;
+.m-items{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  top:0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  .items{
+    display: flex;
+    width: 4*165/@rem;
+    margin-left: 30/@rem;
+    padding-right: 30/@rem;
+
+    .item-c{
+      width: 1.74rem;
+      height: 1.89rem;
+      position: relative;
+      .item{
+        width: 1.64rem;
+        height: 1.75rem;
+        padding-top: 0.17rem;
+        .prize-img-box {
+          padding: 0.15rem;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          text-align: center;
+          .prize-img {
+            width: 0.4rem;
+          }
+        }
+        .item-title {
+          color: #fff;
+          font-size: 0.25rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .iScrollIndicator {
+    background: rgba(0, 0, 0, 0.2) !important;
+    border: 0 none !important;
+  }
+}
+

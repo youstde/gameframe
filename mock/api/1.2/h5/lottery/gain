@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "data": {
+    "score": 0,
+    "lgUrl": "http://wx.ltyun.cc/lg/index.html?appkey=zdnz&ADTAG=mw.clock&appId=wxfa8b4275880355a7",
+    "lottery": {
+      "lotteryId": 111,
+      "lotteryRewardId": 544,
+      "lotteryRewardBizType": 3,
+      "winBizId": 414,
+      "buttonText": "马上瘦身",
+      "skipUrl": "https://game.ltyun.cc/api/public/plan/MzAxXzEzOF80MTRfMzc3XzE=?&deviceId=s991-1500356447503&userIp=61.164.50.178&pvi=653-1500867881556&lotteryId=111",
+      "rewardPicUrl": "//yun.tuia.cn/tuia/img/he42g146dw.jpg",
+      "rewardPicDescription": "原来可以这样原来可以这样",
+      "rewardDescription": "狂瘦52斤！不节食，不运动，我是这样做的"
+    },
+    "remainCount": 3
+  }
+}

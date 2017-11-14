@@ -1,0 +1,16 @@
+<div class="m-items">
+    <div class="swiper-container" id="goodlist-container">
+        <div class="items" style="width: <%=items.length*180/100%>rem;">
+            <%items.forEach(function(item, index){%>
+            <div class="item-c">
+                <div class="item" data-type="goodList">
+                    <div class="prize-img-box">
+                        <img class="prize-img" src="<%=item.iconUrl%>" alt="">
+                    </div>
+                    <p class="item-title"><%=item.title%></p>
+                </div>
+            </div>
+            <%})%>
+        </div>
+    </div>
+</div>

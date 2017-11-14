@@ -1,0 +1,73 @@
+@base : 2.34376;
+@rem:100rem;
+.recommend-modal {
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  z-index:9999;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,.75)
+}
+.recommend-modal .recommend-modal-dialog {
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%)
+}
+.recommend-modal .close {
+  display:block;
+  position:absolute;
+  left:50%;
+  top:-.33rem;
+  -webkit-transform:translateX(-50%);
+  transform:translateX(-50%);
+  width:.125rem * @base;
+  height:.125rem * @base;
+  background:url(//oss.ltcdn.cc/game/Theme/Real/Dice/Images/moreGameClose.png) no-repeat;
+  background-size:100%;
+}
+.recommend-modal .recommend-body1 {
+  padding-top:0.55rem * @base;
+  width:3.2rem * @base;
+  height:3.82rem * @base;
+  background:url(//oss.ltcdn.cc/game/Theme/Real/Dice/Images/bg1.png) no-repeat;
+  background-size:100%;
+}
+.recommend-modal .recommend-body2 {
+  padding-top:0.55rem * @base;
+  width:3.2rem * @base;
+  height:2.37rem * @base;
+  background:url(//oss.ltcdn.cc/game/Theme/Real/Dice/Images/bg2.png) no-repeat;
+  background-size:100%;
+}
+.recommend-modal .recommend-li {
+  display:block;
+  position:relative;
+  width:2.94rem * @base;
+  height:1.415rem * @base;
+  background:url(//oss.ltcdn.cc/game/Theme/Real/Dice/Images/imgWrapper.png) no-repeat;
+  background-size:100%;
+  left:50%;
+  -webkit-transform:translateX(-50%);
+  transform:translateX(-50%);
+  padding:0.05rem * @base;
+  margin-top:0.13rem * @base;
+}
+.recommend-modal .recommend-li img {
+  border-radius:0.1rem * @base;
+}
+.recommend-modal .recommend-btn {
+  display:block;
+  position:absolute;
+  width:1.325rem * @base;
+  height:.435rem * @base;
+  background:url(//oss.ltcdn.cc/game/Theme/Real/Dice/Images/recordmoregamebtn.png) no-repeat;
+  background-size:100%;
+  bottom:-.15rem * @base;
+  left:50%;
+  -webkit-transform:translateX(-50%);
+  transform:translateX(-50%);
+}

@@ -1,0 +1,30 @@
+<div id="recommend-modal" class="recommend-modal">
+    <div class="recommend-modal-dialog">
+        <i class="close"></i>
+        <%if(items.length > 1){%>
+        <div class="recommend-body1">
+            <%items.forEach(function(item, index){%>
+            <a class="recommend-li" href="<%=item.jumpUrl%>">
+                <i class="recommend-btn"></i>
+                <%if(item.bannerUrl){%>
+                <img src="<%=item.bannerUrl%>">
+                <%}else{%>
+                <img src="//oss.ltcdn.cc/game/Theme/Real/Dice/Images/baseImg.jpg">
+                <%}%>
+            </a>
+            <%})%>
+        </div>
+        <%}else{%>
+        <div class="recommend-body2">
+            <a class="recommend-li" href="<%=items[0].jumpUrl%>">
+                <i class="recommend-btn"></i>
+                <%if(items[0].bannerUrl){%>
+                <img src="<%=items[0].bannerUrl%>">
+                <%}else{%>
+                <img src="//oss.ltcdn.cc/game/Theme/Real/Dice/Images/baseImg.jpg">
+                <%}%>
+            </a>
+        </div>
+        <%}%>
+    </div>
+</div>
