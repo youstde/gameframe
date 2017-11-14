@@ -1,10 +1,16 @@
 var spawn = require('child_process').spawn;
 var fs = require('fs');
-module.exports = {
-    build:function(){
+var apiName = process.argv[2];
+
+var Build = {
+    create:function(){
         this._init();
         this.mkdir();
         this.copy();
+    },
+
+    update:function(){
+        this.create();
     },
 
     _init:function(){
@@ -12,26 +18,27 @@ module.exports = {
         this.config = {
             cwd:cwd,
             files:[
-                ['./build.js','-f',cwd],
-                ['./gulpfile.js','-f',cwd],
-                ['./webpack.config.js','-f',cwd],
-                ['./package.json',cwd],
-                ['./webpack.config.js',cwd],
-                ['./README.md',cwd],
-                ['./.gitignore',cwd],
-                ['./mock','-rf',cwd],
-                ['./src/components','-rf',cwd+'/src'],
-                ['./src/modules','-rf',cwd+'/src'],
-                ['./src/page/index/*.js',cwd+'/src/page/index'],
-                ['./src/page/index/*.ejs',cwd+'/src/page/index'],
-                ['./src/page/index/*.less',cwd+'/src/page/index']
+                ['-f',__dirname+'/gulpfile.js',cwd],
+                ['-f',__dirname+'/webpack.config.js',cwd],
+                [__dirname+'/package.json',cwd],
+                [__dirname+'/webpack.config.js',cwd],
+                [__dirname+'/README.md',cwd],
+                [__dirname+'/.gitignore',cwd],
+                ['-rf',__dirname+'/mock',cwd],
+                ['-rf',__dirname+'/src/components',cwd+'/src'],
+                ['-rf',__dirname+'/src/modules',cwd+'/src'],
+                [__dirname+'/src/page/index/*.js',cwd+'/src/page/index'],
+                [__dirname+'/src/page/index/*.ejs',cwd+'/src/page/index'],
+                [__dirname+'/src/page/index/*.less',cwd+'/src/page/index']
             ]
         };
     },
 
     mkdir:function(){
-        var dirs = ['./src','./src/page','./src/page'];
+        var dirs = ['/src','/src/page'];
+        var cwd = this.config.cwd;
         dirs.forEach(function(dir){
+            dir = cwd+dir;
             if(!fs.existsSync(dir)){
                 fs.mkdirSync(dir);
             }
@@ -45,3 +52,9 @@ module.exports = {
         })
     }
 };
+
+if(apiName && Build[apiName]){
+    Build[apiName]();
+}
+
+module.exports = Build;

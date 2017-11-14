@@ -10,3 +10,4 @@ dist/
 *.war
 *.zip
 *.tmp
+test/
