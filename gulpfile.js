@@ -87,6 +87,7 @@ gulp.task('dev',function(){
 gulp.task('prod',function(){
     delDist();
     getEntry(function(entry){
+        webpackConfig.output.publicPath="//activity.ltyun.cc/pre/baitai-game/flop/";
         var compiler = compile(entry);
     })
 });
