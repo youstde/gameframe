@@ -2,10 +2,10 @@ var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var webpack = require('webpack');
 
 var plugins = [];
-plugins.push(new webpack.optimize.CommonsChunkPlugin({
-    name:"commonjs",
-    filename:"common.[chunkhash].js"
-}));
+// plugins.push(new webpack.optimize.CommonsChunkPlugin({
+//     name:"commonjs",
+//     filename:"common.[chunkhash].js"
+// }));
 plugins.push(new UglifyJSPlugin());
 var webpackConfig = {
     output: {
