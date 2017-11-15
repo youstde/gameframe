@@ -1,10 +1,10 @@
 {
   "name": "gameframe",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "author": "gameframe",
   "main":"./build.js",
   "scripts": {
-    "dev": "gulp dev;",
+    "dev": "npm run update;gulp dev;",
     "pre": "npm run update;gulp pre;",
     "prod": "npm run update;gulp prod;",
     "mock": "gulp mock;",
