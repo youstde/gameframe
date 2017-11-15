@@ -11,3 +11,9 @@ dist/
 *.zip
 *.tmp
 test/
+.gitignore
+gulpfile.js
+webpack.config.js
+package.json
+/src/components
+/src/modules
