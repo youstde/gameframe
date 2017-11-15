@@ -14,8 +14,7 @@ var Build = {
             [__dirname + '/src/page/index/gamejson.js', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/content.ejs', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/index.less', cwd + '/src/page/index'],
-            [__dirname + '/README.md', cwd],
-            [__dirname + '/.gitignore', cwd]
+            [__dirname + '/README.md', cwd]
         ]);
         this.mkdir();
         this.copy();
@@ -32,6 +31,7 @@ var Build = {
         this.config = {
             cwd: cwd,
             files: [
+                ['-f',__dirname + '/.gitignore', cwd],
                 ['-f', __dirname + '/gulpfile.js', cwd],
                 ['-f', __dirname + '/webpack.config.js', cwd],
                 ['-rf', __dirname + '/src/components', cwd + '/src'],
