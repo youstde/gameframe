@@ -18,7 +18,6 @@ check_webp_feature('lossless', function(feature, result){
 
     }
 });
-require('../schema');
 window.onload=function(){
     document.body.style.visibility='visible';
 };
