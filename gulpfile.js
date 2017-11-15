@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpackdevserver = require('webpack-dev-server');
 var webpackConfig = require('./webpack.config.js');
+var path = require('path');
 var globs = require('globs');
 var spawn = require('child_process').spawn;
 const del = require('del');
@@ -84,9 +85,11 @@ gulp.task('dev',function(){
  * gulp pre
  */
 gulp.task('pre',function(){
+    var cwd = process.cwd();
+    var pathObj = path.parse(cwd);
     delDist();
     getEntry(function(entry){
-        webpackConfig.output.publicPath="//oss.ltcdn.cc/pre/baitai-game/flop/";
+        webpackConfig.output.publicPath="//oss.ltcdn.cc/pre/baitai-game/"+pathObj.name+"/";
         var compiler = compile(entry);
     })
 });
@@ -95,12 +98,15 @@ gulp.task('pre',function(){
  * gulp prod
  */
 gulp.task('prod',function(){
+    var cwd = process.cwd();
+    var pathObj = path.parse(cwd);
     delDist();
     getEntry(function(entry){
-        webpackConfig.output.publicPath="//oss.ltcdn.cc/prod/baitai-game/flop/";
+        webpackConfig.output.publicPath="//oss.ltcdn.cc/prod/baitai-game/"+pathObj.name+"/";
         var compiler = compile(entry);
     })
 });
+
 
 gulp.task('mock', function () {
     var kitty = require('vkitty');
