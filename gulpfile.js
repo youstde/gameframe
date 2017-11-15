@@ -60,7 +60,7 @@ var compile = function(entry){
  * gulp dev
  */
 gulp.task('dev',function(){
-    webpackConfig.plugins = [webpackConfig.plugins[0]];
+    webpackConfig.plugins = [];
     webpackConfig.devtool = 'source-map';
     delDist();
     getEntry(function(entry){
