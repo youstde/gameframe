@@ -28,10 +28,6 @@ var NoPrize = require('../../modules/noprize/index.js');
 require('./modules/items/index.js');
 
 
-window.onMessage('changeRemain', function (data) {
-    document.querySelector('#remainCount').innerText = data;
-});
-
 var flop = {
     state: 'init',
     timer: '',
