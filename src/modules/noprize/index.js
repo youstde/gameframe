@@ -8,6 +8,7 @@ var NoPrize = {
     _bindEvent: function() {
         parentEl.querySelector('.close').addEventListener('click', function(){
             parentEl.querySelector('.recommend-modal').style.display = 'none';
+            sendMessage('closeNoPrize');
         });
     },
     _render:function(data){
