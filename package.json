@@ -1,12 +1,12 @@
 {
   "name": "gameframe",
-  "version": "0.0.27",
+  "version": "0.0.38",
   "author": "gameframe",
   "main":"./build.js",
   "scripts": {
     "dev": "npm run update;gulp dev;",
-    "pre": "gulp pre;",
-    "prod": "gulp prod;",
+    "pre": "npm run update;gulp pre;",
+    "prod": "npm run update;gulp prod;",
     "mock": "gulp mock;",
     "update":"cnpm install git+ssh://git@code.aliyun.com:baitai-components/gameframe.git;node node_modules/gameframe/build.js update"
   },
