@@ -1,5 +1,5 @@
 !(function(){
-    document.addEventListener('load',function(){
+    window.addEventListener('load',function(){
         var h1= document.body.scrollHeight;
         var h2 = window.innerHeight;
         var h = h1;
