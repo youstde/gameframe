@@ -12,11 +12,11 @@
         }
         var el = document.createElement('div');
         el.style['text-align']='center';
-        el.style['padding']='10px 0';
+        el.style['padding']='7px 0';
         el.style.position='absolute';
         el.style.width='100%';
         el.style.left=0;
-        el.style.top=(h-43+'px');
+        el.style.top=(h-33+'px');
         el.className='com-statement';
         el.innerHTML='<a href="http://adbaitai.com" class="J_schema" onclick="_hmt.push([\'_trackEvent\', \'link\', \'click\', \'http://adbaitai.com\'])" data-id="statement" style="color: rgb(150, 200, 245); display: block;text-decoration: none;">'+text+'</a>';
         document.body.appendChild(el);
