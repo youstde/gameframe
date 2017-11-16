@@ -30,7 +30,7 @@ var Build = {
             cwd: cwd,
             files: [
                 ['-rf',__dirname + '/mock', cwd],
-                ['-f',__dirname + '/gitignore', cwd],
+                ['-f',__dirname + '/gitignore', cwd+'/.gitignore'],
                 ['-f', __dirname + '/gulpfile.js', cwd],
                 ['-f', __dirname + '/webpack.config.js', cwd],
                 ['-f', __dirname + '/package.json', cwd],
