@@ -60,7 +60,6 @@ window.check_webp_feature=function(feature, callback) {
 };
 
 window.findNormalImg=function() {
-    console.log('window.gameJson:',window.gameJson);
     var gameConfig = window.gameJson? window.gameJson.lottery.sceneConfig: window.gamejson.lottery.sceneConfig;
     Object.keys(gameConfig).forEach(function(key){
         if(gameConfig[key]['style']) {
@@ -78,6 +77,7 @@ window.findNormalImg=function() {
             }
         }
     });
+    window.gamejson.lottery.sceneConfig = gameConfig;
 };
 
 window.goodsNormalImg = function() {
@@ -85,6 +85,7 @@ window.goodsNormalImg = function() {
     goodsConfig.forEach(function(item) {
         item.iconUrl = switchWebp(item.iconUrl);
     });
+    window.gamejson.lottery.lotteryRewardVOs = goodsConfig;
 };
 
 window.switchWebp=function(normalUrl) {
