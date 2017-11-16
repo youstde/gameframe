@@ -1,4 +1,4 @@
-###gameframe 测试名称
+###gameframe 测试
 cd test;node ../build.js create;
 
 ### 使用
