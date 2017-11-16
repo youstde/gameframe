@@ -14,6 +14,7 @@ check_webp_feature('lossless', function(feature, result){
         if(window.location.host.indexOf('adbaitai.com') === -1) {
             findNormalImg();
             goodsNormalImg();
+            sendMessage("schemaJSON",gamejson.lottery.sceneConfig);
         }
 
     }

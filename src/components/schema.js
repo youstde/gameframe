@@ -55,5 +55,4 @@ window.onMessage('schemaJSON',function(data){
     Schema.parse(data);
 });
 var gamejson = window.gamejson ? window.gamejson: window.gameJson;
-Schema.parse(gamejson.lottery.sceneConfig);
 parent.window.sendMessage('pages/deploygame.set',gamejson.lottery.sceneConfig);
