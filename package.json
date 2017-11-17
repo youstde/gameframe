@@ -4,11 +4,6 @@
   "author": "gameframe",
   "main":"./build.js",
   "scripts": {
-    "dev": "npm run update;gulp dev;",
-    "pre": "npm run update;gulp pre;",
-    "prod": "npm run update;gulp prod;",
-    "mock": "gulp mock;",
-    "update":"cnpm install git+ssh://git@code.aliyun.com:baitai-components/gameframe.git;node node_modules/gameframe/build.js update"
   },
   "dependencies": {
     "css-loader": "0.28.7",
