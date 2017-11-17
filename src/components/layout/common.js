@@ -6,6 +6,7 @@ require('../api.back');
 require('../baidu.tongji');
 require('../qq.tongji');
 require('../buoy');
+require('../redpackage');
 require('../statement');
 /**
  * webp处理

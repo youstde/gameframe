@@ -26,6 +26,7 @@ var Data = {
             data:data,
             onsuccess:function(res){
                 callback(res);
+
             }
         };
 
