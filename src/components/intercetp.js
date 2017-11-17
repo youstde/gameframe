@@ -12,7 +12,10 @@
         return queryJson[name] || '';
     };
 
-    var intercetpUrl = '//activity'+window.location.host.replace('activity','')+'/game/middleActivePage/Real/index.html?back=' + getQueryString('back');
+    var intercetpUrl = '//activity'+window.location.host.replace('activity','')+'/pre/laitui-web/middlepage/index.html?back=' + getQueryString('back');
+    if(window.location.href.indexOf('/real/')>-1){
+        intercetpUrl = intercetpUrl.replace('/pre/','/prod/');
+    }
     var ready = function(){
         if (!history.state) {
             var oldUrl = location.href;
