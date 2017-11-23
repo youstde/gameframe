@@ -12,9 +12,20 @@
         return queryJson[name] || '';
     };
 
-    var intercetpUrl = '//activity'+window.location.host.replace('activity','')+'/pre/laitui-web/middlepage/index.html?back=' + getQueryString('back');
-    if(window.location.href.indexOf('/real/')>-1){
-        intercetpUrl = intercetpUrl.replace('/pre/','/prod/');
+    var intercetpType = getQueryString('backSkipType'),
+        backSkipUrl = getQueryString('backSkipUrl'),
+        intercetpUrl = '';
+    if(intercetpType) {
+        if(intercetpType === '1') {
+            intercetpUrl = '//activity'+window.location.host.replace('activity','')+'/pre/laitui-web/middlepage/index.html?back=' + getQueryString('back');
+        }else if(intercetpType === '2') {
+            intercetpUrl = '//activity'+window.location.host.replace('activity','')+'/pre/laitui-web/navigatepage/index.html?back=' + getQueryString('back');
+        }
+        if(window.location.href.indexOf('/real/')>-1){
+            intercetpUrl = intercetpUrl.replace('/pre/','/prod/');
+        }
+    }else if(backSkipUrl) {
+        intercetpUrl = backSkipUrl;
     }
     var ready = function(){
         if (!history.state) {
