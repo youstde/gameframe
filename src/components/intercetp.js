@@ -26,6 +26,11 @@
         }
     }else if(backSkipUrl) {
         intercetpUrl = backSkipUrl;
+    }else {
+        intercetpUrl = '//activity'+window.location.host.replace('activity','')+'/pre/laitui-web/middlepage/index.html?back=' + getQueryString('back');
+        if(window.location.href.indexOf('/real/')>-1){
+            intercetpUrl = intercetpUrl.replace('/pre/','/prod/');
+        }
     }
     var ready = function(){
         if (!history.state) {
