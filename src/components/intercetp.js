@@ -15,6 +15,7 @@
     var intercetpType = getQueryString('backSkipType'),
         backSkipUrl = getQueryString('backSkipUrl')?decodeURIComponent(getQueryString('backSkipUrl')): '',
         intercetpUrl = '';
+    console.log('backSkipUrl:',backSkipUrl);
     if(intercetpType) {
         if(intercetpType === '1') {
             intercetpUrl = '//activity'+window.location.host.replace('activity','')+'/pre/laitui-web/middlepage/index.html?back=' + getQueryString('back');
