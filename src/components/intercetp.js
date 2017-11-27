@@ -13,7 +13,7 @@
     };
 
     var intercetpType = getQueryString('backSkipType'),
-        backSkipUrl = getQueryString('backSkipUrl'),
+        backSkipUrl = getQueryString('backSkipUrl')?decodeURIComponent(getQueryString('backSkipUrl')): '',
         intercetpUrl = '';
     if(intercetpType) {
         if(intercetpType === '1') {
