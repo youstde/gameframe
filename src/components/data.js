@@ -26,12 +26,7 @@ var Data = {
             data:data,
             onsuccess:function(res){
                 callback(res);
-                if(res.data.float) {
-                    sendMessage('setRedPackage',{
-                        data: res.data.float,
-                        type: 1
-                    });
-                }
+                sendMessage('setRedPackage', 'lottery');
             }
         };
 
