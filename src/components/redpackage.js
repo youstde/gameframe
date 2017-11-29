@@ -1,5 +1,8 @@
 (function () {
-    var finallUlr = '//oss.ltcdn.cc/game/Theme/redpackage/prod/redpackage.js?btm=112301';
+    var finallUlr = '//oss.ltcdn.cc/game/Theme/redpackage/prod/redpackage.js?btm=1128';
+    if(window.location.host.indexOf('pre')>-1){
+        finallUlr = finallUlr.replace('prod','pre');
+    }
     var scriptObj = document.createElement('script');
     scriptObj.src = finallUlr;
     document.getElementsByTagName("body")[0].appendChild(scriptObj);
