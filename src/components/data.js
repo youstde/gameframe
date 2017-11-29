@@ -26,7 +26,8 @@ var Data = {
             data:data,
             onsuccess:function(res){
                 callback(res);
-                sendMessage('setRedPackage', 'lottery');
+                //红包弹窗展示
+                // sendMessage('setRedPackage', 'lottery');
             }
         };
 
