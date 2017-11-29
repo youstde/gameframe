@@ -1,6 +1,6 @@
 (function () {
     var finallUlr = '//oss.ltcdn.cc/game/Theme/redpackage/prod/redpackage.js?btm=1128';
-    if(window.location.host.indexOf('pre')>-1){
+    if(window.location.href.indexOf('pre')>-1){
         finallUlr = finallUlr.replace('prod','pre');
     }
     var scriptObj = document.createElement('script');
