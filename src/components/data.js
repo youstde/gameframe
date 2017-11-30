@@ -27,6 +27,7 @@ var Data = {
             onsuccess:function(res){
                 callback(res);
                 //红包弹窗展示
+                console.log('sendMessage:',sendMessage);
                 sendMessage('setRedPackage', 'lottery');
             }
         };
