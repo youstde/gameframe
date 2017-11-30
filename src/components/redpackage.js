@@ -1,5 +1,5 @@
 (function () {
-    var finallUlr = '//oss.ltcdn.cc/game/Theme/redpackage/prod/redpackage.js?btm=112801';
+    var finallUlr = '//oss.ltcdn.cc/game/Theme/redpackage/prod/redpackage.js?btm=113001';
     if(window.location.href.indexOf('pre')>-1){
         finallUlr = finallUlr.replace('prod','pre');
     }
