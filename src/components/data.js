@@ -27,7 +27,11 @@ var Data = {
             onsuccess:function(res){
                 callback(res);
                 //红包弹窗展示
-                console.log('sendMessage:',sendMessage);
+                // $tokenId
+                sendMessage('token', {
+                    token:data.token,
+                    tongdunTokenId: $tokenId
+                });
                 sendMessage('setRedPackage', 'lottery');
             }
         };
