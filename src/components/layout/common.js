@@ -20,6 +20,7 @@ check_webp_feature('lossless', function(feature, result){
 
     }
     sendMessage("schemaJSON",gamejson.lottery.sceneConfig);
+    sendMessage("initRenderGoodsList");
 });
 window.onload=function(){
     document.body.style.visibility='visible';
