@@ -19,6 +19,8 @@
         el.style.top=(h-23+'px');
         el.className='com-statement';
         el.innerHTML='<a href="http://adbaitai.com" class="J_schema" onclick="_hmt.push([\'_trackEvent\', \'link\', \'click\', \'http://adbaitai.com\'])" data-id="statement" style="color: rgb(150, 200, 245); display: block;text-decoration: none;">'+text+'</a>';
-        document.body.appendChild(el);
+        setTimeout(function(){
+            document.body.appendChild(el);
+        },1000);
     })
 }());
