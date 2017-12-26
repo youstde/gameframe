@@ -1,6 +1,6 @@
 {
   "name": "gameframe",
-  "version": "0.0.74",
+  "version": "0.0.75",
   "author": "gameframe",
   "main":"./build.js",
   "scripts": {
