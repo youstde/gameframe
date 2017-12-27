@@ -8,13 +8,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <title>翻牌抢红包</title>
     <script>console.log('data')</script>
-    <script>
-        var $tokenId = "betterdsp-" + new Date().getTime() + "-" + Math.random().toString(16).substr(2);
-        if(window.location.host.indexOf('adbaitai.com')>-1){
-            document.domain="adbaitai.com";
-        }
-        !function(e,i){var t=e.documentElement,n=navigator.userAgent.match(/iphone|ipod|ipad/gi),a=n?Math.min(i.devicePixelRatio,3):1,m="orientationchange"in window?"orientationchange":"resize";t.dataset.dpr=a;for(var d,l,c=!1,o=e.getElementsByTagName("meta"),r=0;r<o.length;r++)l=o[r],"viewport"==l.name&&(c=!0,d=l);if(c)d.content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no";else{var o=e.createElement("meta");o.name="viewport",o.content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no",t.firstElementChild.appendChild(o)}var s=function(){var e=t.clientWidth;e/a>640&&(e=640*a),window.remScale=e/640,t.style.fontSize=100*(e/750)+"px";window.FootfontSize=100*(e/750);};s(),e.addEventListener&&i.addEventListener(m,s,!1)}(document,window);
-    </script>
     <script src="//oss.ltcdn.cc/game/Theme/Real/Js/ejs.min.js"></script>
     <%=data.baseJs%>
 </head>
