@@ -1,6 +1,6 @@
 {
   "name": "gameframe",
-  "version": "0.0.86",
+  "version": "0.0.87",
   "author": "gameframe",
   "main":"./build.js",
   "scripts": {
@@ -21,6 +21,7 @@
     "uglifyjs-webpack-plugin": "1.0.1",
     "vkitty": "0.2.3",
     "webpack": "3.8.1",
-    "webpack-dev-server": "2.9.4"
+    "webpack-dev-server": "2.9.4",
+    "axios": "0.16.1"
   }
 }
