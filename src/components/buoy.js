@@ -2,8 +2,8 @@
     win.BuoyMiddle = function (options) {
         var baseUrl = '//oss.ltcdn.cc/game/Theme/Buoy/Buoy',
             finallUlr = '',
-            BuoyId = Math.floor(Math.random() * 7 + 1);
-        finallUlr = baseUrl + '_' +BuoyId + '.js?v=2017122901';
+            BuoyId = Math.floor(Math.random() * 9 + 1);
+        finallUlr = baseUrl + '_' +BuoyId + '.js?v=20180111';
         var scriptObj = document.createElement('script');
         scriptObj.src = finallUlr;
         document.getElementsByTagName("body")[0].appendChild(scriptObj);
