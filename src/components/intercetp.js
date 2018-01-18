@@ -26,7 +26,11 @@
             intercetpUrl = intercetpUrl.replace('/pre/','/prod/');
         }
     }else if(backSkipUrl) {
-        intercetpUrl = backSkipUrl + '&back=' + getQueryString('back');
+        if(getQueryString('url')) {
+            intercetpUrl = backSkipUrl + '&back=' + getQueryString('back');
+        }else {
+            intercetpUrl = backSkipUrl + '?back=' + getQueryString('back');
+        }
     }else {
         intercetpUrl = '//activity'+window.location.host.replace('activity','')+'/pre/laitui-web/middlepage/index.html?back=' + getQueryString('back');
         if(window.location.href.indexOf('/real/')>-1){
