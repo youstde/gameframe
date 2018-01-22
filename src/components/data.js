@@ -15,9 +15,11 @@ var Data = {
             data:data,
             onsuccess:function(res){
                 callback(res);
+            },
+            onerror:function(){
+                badJsReport("gain-接口请求失败");
             }
         };
-
         Vap.jsonp(host+'/api/1.2/h5/lottery/gain',options);
     },
     getLottery:function(data,callback){
@@ -33,6 +35,9 @@ var Data = {
                     tongdunTokenId: $tokenId
                 });
                 sendMessage('setRedPackage', 'lottery');
+            },
+            onerror:function(){
+                badJsReport("getLottery-接口请求失败");
             }
         };
 
@@ -52,6 +57,7 @@ var Data = {
                 callback(res);
             },
             onerror:function(){
+                badJsReport("getSupplyLottery-接口请求失败");
             }
         };
         Vap.jsonp(host+'/api/1.1/h5/lottery/getSupplyLottery',options)
