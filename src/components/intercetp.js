@@ -23,7 +23,7 @@
             intercetpUrl = '//activity'+window.location.host.replace('activity','')+'/pre/laitui-web/navigatepage/index.html?back=' + getQueryString('back');
         }else if(intercetpType === '5') {
             var collectionPageId = getQueryString('collectionPageId');
-            intercetpUrl = '//activity'+window.location.host.replace('activity','')+'/collection/page/pre/'+collectionPageId+'/index.html'+getQueryString('back');
+            intercetpUrl = '//activity'+window.location.host.replace('activity','')+'/collection/page/pre/'+collectionPageId+'/index.html?back='+getQueryString('back');
         }
         if(window.location.href.indexOf('/real/')>-1){
             intercetpUrl = intercetpUrl.replace('/pre/','/prod/');
