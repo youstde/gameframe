@@ -76,6 +76,9 @@ Vap.jsonp = function(url,options){
 
     var callbackstring = 'jsonp'+(parseInt(Math.random()*10000000000)+ new Date().getTime());
     window[callbackstring] = function (res) {
+        if(!res.success) {
+            badJsReport(url+'_'+JSON.stringify(res));
+        }
         options.onsuccess && options.onsuccess(res);
     };
     if (param) {
