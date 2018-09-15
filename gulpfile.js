@@ -75,9 +75,9 @@ gulp.task('dev',function(){
             }
         });
         server.listen(8080, '127.0.0.1', function() {});
-        setTimeout(function(){
-            spawn('open',['http://127.0.0.1:8080/index.html'])
-        },1500);
+        // setTimeout(function(){
+        //     spawn('open',['http://127.0.0.1:8080/index.html'])
+        // },1500);
     })
 });
 
